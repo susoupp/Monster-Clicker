@@ -8,6 +8,7 @@ public class CubeController : MonoBehaviour
 {
    public IntValue MonsterHp;
    public SubNewsletter MonsterDeathNewsletter;
+   public SubNewsletter MonsterHitNewsletter;
    private Animator _anim;
    [SerializeField] private GameObject _monster;
    [SerializeField] private GameObject _death;
@@ -22,6 +23,7 @@ public class CubeController : MonoBehaviour
    private void OnMouseDown()
    {
       Hit();
+      MonsterHitNewsletter.SendNewsletter();
       if (MonsterHp.value < 0)
       {
          MonsterDeathNewsletter.SendNewsletter();

@@ -9,6 +9,7 @@ public class CubeHealth : MonoBehaviour, INewsletterSubscriber
     public IntValue MonsterHp;
     public SubNewsletter MonsterDeathNewsletter;
     
+
     private void Awake()
     {
         textMeshProUGUI = GetComponent<TextMeshProUGUI>();
@@ -34,5 +35,8 @@ public class CubeHealth : MonoBehaviour, INewsletterSubscriber
     public void Notify()
     {
         Debug.Log("Informed");
+        Destroy(textMeshProUGUI);
+       
+        
     }
 }

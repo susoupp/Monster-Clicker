@@ -19,7 +19,7 @@ public class SubNewsletter : ScriptableObject
        _subscribers.Add(newSubscriber);
     }
     
-    public void UnsubscribeForNewletter(INewsletterSubscriber SubscriberToRemove)
+    public void UnsubscribeForNewsletter(INewsletterSubscriber SubscriberToRemove)
     {
         _subscribers.Remove(SubscriberToRemove);
     }

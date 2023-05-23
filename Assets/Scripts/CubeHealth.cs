@@ -34,9 +34,11 @@ public class CubeHealth : MonoBehaviour, INewsletterSubscriber
 
     public void Notify()
     {
+        MonsterDeathNewsletter.UnsubscribeForNewsletter(this);
         Debug.Log("Informed");
         Destroy(textMeshProUGUI);
-       
         
+
+
     }
 }
